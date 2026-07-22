@@ -23,7 +23,7 @@
         <a class="admin-nav-item active" href="volunteer-dashboard.html"><i class="fas fa-user-circle"></i> My Profile</a>
         <a class="admin-nav-item" href="#assigned"><i class="fas fa-tasks"></i> Assigned Tasks</a>
         <a class="admin-nav-item" href="#badges"><i class="fas fa-trophy"></i> Badges & Ranking</a>
-        <a class="admin-nav-item" href="#certificate" data-bs-toggle="modal" data-bs-target="#certModal"><i class="fas fa-certificate text-warning"></i> CESR Certificate</a>
+        <a class="admin-nav-item" href="#certificate" data-bs-toggle="modal" data-bs-target="#certModal"><i class="fas fa-certificate text-warning"></i> Volunteer Service Certificate</a>
         <a class="admin-nav-item" href="../index.html"><i class="fas fa-globe"></i> Back to Main Site</a>
       </nav>
     </aside>
@@ -37,11 +37,11 @@
           <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Volunteer Profile" class="rounded-circle border border-2 border-success" width="55" height="55" style="object-fit: cover;">
           <div>
             <h4 class="fw-bold mb-0">Ananya Roy <span class="badge bg-warning text-dark fs-8 ms-1"><i class="fas fa-crown"></i> Rank #4</span></h4>
-            <small class="text-muted">Verified CESR Volunteer • Member since Jan 2026</small>
+            <small class="text-muted">Verified Community Service Volunteer • Member since Jan 2026</small>
           </div>
         </div>
         <div>
-          <button class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#certModal"><i class="fas fa-download me-1"></i> Download CESR Certificate</button>
+          <button class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#certModal"><i class="fas fa-download me-1"></i> Download Volunteer Service Certificate</button>
         </div>
       </div>
 
@@ -169,7 +169,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content glass-card border-0">
         <div class="modal-header border-0">
-          <h5 class="modal-title fw-bold text-success"><i class="fas fa-certificate text-warning me-2"></i> Official CESR Volunteer Certificate</h5>
+          <h5 class="modal-title fw-bold text-success"><i class="fas fa-certificate text-warning me-2"></i> Official Community Service Volunteer Certificate</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body p-4 text-center">
@@ -180,7 +180,7 @@
             
             <h6 class="text-uppercase tracking-wider text-muted mb-1">CERTIFICATE OF APPRECIATION</h6>
             <h2 class="fw-bold text-success mb-2">COMMUNITY HELP HUB</h2>
-            <p class="small text-secondary mb-3">College Subject: Community Engagement and Social Responsibility (CESR)</p>
+            <p class="small text-secondary mb-3">College Subject: Community Engagement and Social Responsibility (Community Service)</p>
             
             <p class="mb-1">This is to proudly certify that</p>
             <h3 class="fw-extrabold text-primary my-2">ANANYA ROY</h3>
@@ -191,7 +191,7 @@
             <div class="d-flex justify-content-between align-items-end mt-4 pt-3 border-top small">
               <div class="text-start">
                 <span class="fw-bold d-block">Dr. A. K. Sharma</span>
-                <span class="text-muted">CESR Academic Supervisor</span>
+                <span class="text-muted">CHH Supervisor</span>
               </div>
               <div class="text-end">
                 <span class="fw-bold d-block">CHH-CERT-2026-9481</span>
@@ -215,11 +215,11 @@
   <script src="../assets/js/main.js"></script>
   <script>
     function triggerCertDownload() {
-      const text = "COMMUNITY HELP HUB - OFFICIAL CESR VOLUNTEER CERTIFICATE\n--------------------------------------------------\nVolunteer Name: Ananya Roy\nHours Logged: 68.5 Hours\nSubject: Community Engagement and Social Responsibility\nCertificate ID: CHH-CERT-2026-9481\nStatus: VERIFIED & RECOGNIZED";
+      const text = "COMMUNITY HELP HUB - OFFICIAL Community Service VOLUNTEER CERTIFICATE\n--------------------------------------------------\nVolunteer Name: Ananya Roy\nHours Logged: 68.5 Hours\nSubject: Community Engagement and Social Responsibility\nCertificate ID: CHH-CERT-2026-9481\nStatus: VERIFIED & RECOGNIZED";
       const blob = new Blob([text], { type: 'text/plain' });
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
-      a.download = 'Ananya_Roy_CESR_Volunteer_Certificate.txt';
+      a.download = 'Ananya_Roy_Community Service_Volunteer_Certificate.txt';
       a.click();
     }
   </script>

@@ -1,6 +1,6 @@
 /* ==========================================================================
    COMMUNITY HELP HUB - CHART.JS INITIALIZATIONS
-   CESR Subject Project: Community Engagement and Social Responsibility
+   NGO Social Service Initiative: Community Engagement and Social Responsibility
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {

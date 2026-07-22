@@ -1,6 +1,6 @@
 /* ==========================================================================
    COMMUNITY HELP HUB - FIREBASE / LOCALSTORAGE REALTIME DATA ENGINE
-   CESR Subject Project: Community Engagement and Social Responsibility
+   NGO Social Service Initiative: Community Engagement and Social Responsibility
    ========================================================================== */
 
 const DataEngine = {
