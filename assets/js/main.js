@@ -31,7 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 7. Global Form Submissions with Toasts
   initFormHandlers();
 
-  // 8. SOS Emergency Trigger Handler
+  // 8. Dynamic Portal Link Updater (User Portal by default, Admin Portal if logged in as admin)
+  updatePortalNavLinks();
+
+  // 9. SOS Emergency Trigger Handler
   initSOSTriggers();
 });
 
@@ -343,5 +346,23 @@ function initSOSTriggers() {
         showToast('EMERGENCY SOS SENT! GPS Coordinates dispatched to disaster management teams.', 'danger');
       }
     });
+  });
+}
+
+function updatePortalNavLinks() {
+  const portalLinks = document.querySelectorAll('.portal-nav-link');
+  const role = sessionStorage.getItem('chh_role');
+
+  portalLinks.forEach(link => {
+    const isRoot = !window.location.pathname.includes('/pages/') && !window.location.pathname.includes('/admin/') && !window.location.pathname.includes('/user/');
+    const basePrefix = isRoot ? '' : '../';
+
+    if (role === 'admin') {
+      link.href = basePrefix + 'admin/index.html';
+      link.innerHTML = '<i class="fas fa-user-shield me-1"></i> Admin Portal';
+    } else {
+      link.href = basePrefix + 'user/index.html';
+      link.innerHTML = '<i class="fas fa-user-circle me-1"></i> User Portal';
+    }
   });
 }
