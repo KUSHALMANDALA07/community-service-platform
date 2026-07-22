@@ -1,0 +1,20 @@
+{
+  "name": "community-service-platform",
+  "version": "1.0.0",
+  "description": "Community Help Hub - Connecting Communities Through Compassion and Technology",
+  "type": "module",
+  "scripts": {
+    "build": "node build-analytics.js"
+  },
+  "keywords": [
+    "community",
+    "ngo",
+    "social-service",
+    "volunteer"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  }
+}
