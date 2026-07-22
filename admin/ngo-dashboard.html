@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO Partner Portal | Community Help Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="d-flex">
+    
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar" style="width: 260px;">
+      <div class="d-flex align-items-center mb-4 px-2">
+        <div class="stat-icon me-2 mb-0" style="width: 36px; height: 36px; font-size: 1rem; color: #00b4d8; background: rgba(0, 180, 216, 0.15);"><i class="fas fa-building"></i></div>
+        <h5 class="fw-bold text-info mb-0">NGO Partner <span class="badge bg-info text-white fs-8">Portal</span></h5>
+      </div>
+
+      <nav class="nav flex-column">
+        <a class="admin-nav-item active" href="ngo-dashboard.html"><i class="fas fa-warehouse"></i> Inventory Stock</a>
+        <a class="admin-nav-item" href="#claims"><i class="fas fa-handshake"></i> Claim Requests</a>
+        <a class="admin-nav-item" href="cesr-report.html"><i class="fas fa-file-alt text-warning"></i> CESR Academic Report</a>
+        <a class="admin-nav-item" href="index.html"><i class="fas fa-chart-line"></i> Admin Dashboard</a>
+        <a class="admin-nav-item" href="../index.html"><i class="fas fa-globe"></i> Main Website</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow-1 p-4" style="background: var(--bg-main);">
+      
+      <!-- TOP BAR -->
+      <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <div>
+          <h3 class="fw-bold mb-0">Hope Welfare Foundation <span class="badge bg-success ms-2"><i class="fas fa-check-circle me-1"></i> Verified NGO</span></h3>
+          <small class="text-muted">License: NGO-REG-98765 • Sector 14 Distribution Hub</small>
+        </div>
+        <div>
+          <button class="btn btn-primary-custom" onclick="alert('Ration & Supplies Restock Order Placed!');"><i class="fas fa-plus me-1"></i> Request Supply Restock</button>
+        </div>
+      </div>
+
+      <!-- INVENTORY METRICS -->
+      <div class="row g-4 mb-4">
+        
+        <div class="col-md-3">
+          <div class="stat-card">
+            <i class="fas fa-boxes text-success fs-3 mb-2"></i>
+            <h3 class="fw-bold mb-0 text-success">450</h3>
+            <small class="text-muted">Dry Ration Kits In Stock</small>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="stat-card">
+            <i class="fas fa-medkit text-danger fs-3 mb-2"></i>
+            <h3 class="fw-bold mb-0 text-danger">120</h3>
+            <small class="text-muted">Medical First Aid Kits</small>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="stat-card">
+            <i class="fas fa-blanket text-warning fs-3 mb-2"></i>
+            <h3 class="fw-bold mb-0 text-warning">310</h3>
+            <small class="text-muted">Winter Blankets</small>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="stat-card">
+            <i class="fas fa-truck-loading text-info fs-3 mb-2"></i>
+            <h3 class="fw-bold mb-0 text-info">12</h3>
+            <small class="text-muted">Active Relief Drivers</small>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- NGO INVENTORY TABLE -->
+      <div class="glass-card p-4 mb-4">
+        <h5 class="fw-bold mb-3"><i class="fas fa-boxes text-primary me-2"></i> Relief Supplies Inventory Audit</h5>
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0 small">
+            <thead class="table-light">
+              <tr>
+                <th>Item Category</th>
+                <th>Stock Quantity</th>
+                <th>Unit</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Dry Rice & Dal Ration Packs</strong></td>
+                <td>450</td>
+                <td>Packets</td>
+                <td><span class="badge bg-success">In Stock</span></td>
+                <td><button class="btn btn-sm btn-outline-primary" onclick="alert('Dispensed 50 packets to Sector 4 drive.');">Dispatch 50</button></td>
+              </tr>
+              <tr>
+                <td><strong>Emergency First Aid Kits</strong></td>
+                <td>120</td>
+                <td>Kits</td>
+                <td><span class="badge bg-success">In Stock</span></td>
+                <td><button class="btn btn-sm btn-outline-primary" onclick="alert('Dispensed 10 kits.');">Dispatch 10</button></td>
+              </tr>
+              <tr>
+                <td><strong>Oxygen Cylinders (10L)</strong></td>
+                <td>15</td>
+                <td>Units</td>
+                <td><span class="badge bg-danger">Low Stock</span></td>
+                <td><button class="btn btn-sm btn-danger text-white" onclick="alert('Emergency procurement order sent!');">Reorder Urgently</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
