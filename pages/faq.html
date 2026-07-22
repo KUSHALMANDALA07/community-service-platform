@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions | Community Help Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- STICKY NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top glass-navbar py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="../index.html">
+        <div class="stat-icon me-2 mb-0 d-inline-flex align-items-center justify-content-center" style="width: 42px; height: 42px; font-size: 1.2rem;">
+          <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <span>Community <span class="text-secondary">Help Hub</span></span>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFaq">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarFaq">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="volunteer.html">Volunteer</a></li>
+          <li class="nav-item"><a class="nav-link" href="request-help.html">Request Help</a></li>
+          <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu glass-card border-0 shadow-lg">
+              <li><a class="dropdown-item py-2" href="education-support.html"><i class="fas fa-graduation-cap text-primary me-2"></i> Education Support</a></li>
+              <li><a class="dropdown-item py-2" href="medical-support.html"><i class="fas fa-user-md text-success me-2"></i> Medical Support</a></li>
+              <li><a class="dropdown-item py-2" href="emergency.html"><i class="fas fa-ambulance text-danger me-2"></i> Emergency Hub</a></li>
+              <li><a class="dropdown-item py-2" href="events.html"><i class="fas fa-calendar-alt text-warning me-2"></i> Events</a></li>
+              <li><a class="dropdown-item py-2" href="success-stories.html"><i class="fas fa-star text-warning me-2"></i> Success Stories</a></li>
+              <li><a class="dropdown-item py-2" href="community-map.html"><i class="fas fa-map-marked-alt text-info me-2"></i> Community Map</a></li>
+              <li><a class="dropdown-item py-2" href="blog.html"><i class="fas fa-newspaper text-secondary me-2"></i> Blog & Awareness</a></li>
+              <li><a class="dropdown-item py-2 active" href="faq.html"><i class="fas fa-question-circle text-primary me-2"></i> FAQ</a></li>
+              <li><a class="dropdown-item py-2" href="contact.html"><i class="fas fa-envelope text-primary me-2"></i> Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center ms-lg-3 gap-2">
+          <button class="btn btn-sm btn-outline-secondary rounded-circle p-2" id="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="login.html" class="btn btn-outline-custom btn-sm">Login</a>
+          <a href="register.html" class="btn btn-primary-custom btn-sm">Register</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="py-5 bg-gradient-primary text-white text-center">
+    <div class="container py-3">
+      <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-semibold mb-2">Help Center</span>
+      <h1 class="display-4 fw-bold">Frequently Asked Questions</h1>
+      <p class="lead opacity-90 max-w-700 mx-auto">
+        Have questions about submitting requests, volunteering, donation receipts, or CESR academic credits?
+      </p>
+
+      <!-- SEARCH BAR -->
+      <div class="max-w-600 mx-auto mt-4">
+        <div class="input-group input-group-lg glass-card p-1">
+          <span class="input-group-text bg-transparent border-0"><i class="fas fa-search text-primary"></i></span>
+          <input type="text" id="faqSearchInput" class="form-control bg-transparent border-0" placeholder="Type a keyword e.g. 'donation', 'certificate'..." onkeyup="filterFAQ()">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10" data-aos="fade-up">
+          
+          <div class="accordion glass-card p-3 p-md-4" id="faqAccordion">
+            
+            <!-- Q1 -->
+            <div class="accordion-item bg-transparent border-bottom py-2 faq-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button bg-transparent fw-bold text-primary shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                  <i class="fas fa-hand-holding-water me-2"></i> How fast are Help Requests processed?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                  Emergency SOS requests are processed within <strong>15 to 30 minutes</strong>. Standard food, clothing, and medical aid requests are reviewed by area coordinators within 24 hours.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="accordion-item bg-transparent border-bottom py-2 faq-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed bg-transparent fw-bold text-primary shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                  <i class="fas fa-certificate me-2"></i> Do volunteers receive a verified CESR Certificate?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                  Yes! Volunteers who complete at least <strong>10 hours</strong> of community service earn an official University-Recognized CESR Certificate with QR verification code.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="accordion-item bg-transparent border-bottom py-2 faq-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed bg-transparent fw-bold text-primary shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                  <i class="fas fa-truck me-2"></i> How does door-step donation pickup work?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                  When you submit a donation on our <a href="donate.html" class="text-primary font-weight-bold">Donate Page</a>, a local volunteer driver is assigned. They will arrive at your address on your preferred date and issue a digital receipt instantly.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="accordion-item bg-transparent border-bottom py-2 faq-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed bg-transparent fw-bold text-primary shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                  <i class="fas fa-shield-alt me-2"></i> How is transparency ensured for monetary donations?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                  Every rupee donated is logged in our real-time <a href="../admin/index.html" class="text-primary font-weight-bold">Admin Analytics Dashboard</a>. Monthly audit reports and beneficiary distribution receipts are published open-source.
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-section">
+    <div class="container text-center text-muted small">
+      <p class="mb-0">&copy; 2026 Community Help Hub. CESR Subject Project. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    function filterFAQ() {
+      const input = document.getElementById('faqSearchInput').value.toLowerCase();
+      const items = document.querySelectorAll('.faq-item');
+      items.forEach(item => {
+        const text = item.innerText.toLowerCase();
+        if (text.includes(input)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

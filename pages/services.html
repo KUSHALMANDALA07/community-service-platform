@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Community Help Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- STICKY NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top glass-navbar py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="../index.html">
+        <div class="stat-icon me-2 mb-0 d-inline-flex align-items-center justify-content-center" style="width: 42px; height: 42px; font-size: 1.2rem;">
+          <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <span>Community <span class="text-secondary">Help Hub</span></span>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarServices">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarServices">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="volunteer.html">Volunteer</a></li>
+          <li class="nav-item"><a class="nav-link" href="request-help.html">Request Help</a></li>
+          <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu glass-card border-0 shadow-lg">
+              <li><a class="dropdown-item py-2" href="education-support.html"><i class="fas fa-graduation-cap text-primary me-2"></i> Education Support</a></li>
+              <li><a class="dropdown-item py-2" href="medical-support.html"><i class="fas fa-user-md text-success me-2"></i> Medical Support</a></li>
+              <li><a class="dropdown-item py-2" href="emergency.html"><i class="fas fa-ambulance text-danger me-2"></i> Emergency Hub</a></li>
+              <li><a class="dropdown-item py-2" href="events.html"><i class="fas fa-calendar-alt text-warning me-2"></i> Events</a></li>
+              <li><a class="dropdown-item py-2" href="success-stories.html"><i class="fas fa-star text-warning me-2"></i> Success Stories</a></li>
+              <li><a class="dropdown-item py-2" href="community-map.html"><i class="fas fa-map-marked-alt text-info me-2"></i> Community Map</a></li>
+              <li><a class="dropdown-item py-2" href="blog.html"><i class="fas fa-newspaper text-secondary me-2"></i> Blog & Awareness</a></li>
+              <li><a class="dropdown-item py-2" href="faq.html"><i class="fas fa-question-circle text-primary me-2"></i> FAQ</a></li>
+              <li><a class="dropdown-item py-2" href="contact.html"><i class="fas fa-envelope text-primary me-2"></i> Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center ms-lg-3 gap-2">
+          <button class="btn btn-sm btn-outline-secondary rounded-circle p-2" id="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="login.html" class="btn btn-outline-custom btn-sm">Login</a>
+          <a href="register.html" class="btn btn-primary-custom btn-sm">Register</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER HERO -->
+  <section class="py-5 bg-gradient-primary text-white text-center">
+    <div class="container py-4">
+      <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-semibold mb-2">Our Core Offerings</span>
+      <h1 class="display-4 fw-bold">Community Relief Services</h1>
+      <p class="lead opacity-90 max-w-700 mx-auto">
+        Empowering lives through targeted assistance, relief campaigns, medical care, and educational growth.
+      </p>
+    </div>
+  </section>
+
+  <!-- 10 SERVICES GRID -->
+  <section class="py-5">
+    <div class="container py-3">
+      <div class="row g-4">
+        
+        <!-- 1. Food Assistance -->
+        <div class="col-md-6 col-lg-4" id="food" data-aos="fade-up">
+          <div class="service-card glass-card">
+            <div>
+              <div class="icon-wrapper"><i class="fas fa-utensils"></i></div>
+              <h4 class="fw-bold">1. Food Assistance</h4>
+              <p class="text-muted">Daily hot meals, grain distribution, surplus food recovery from events, and emergency meal packages for vulnerable families.</p>
+            </div>
+            <a href="request-help.html?category=Food" class="btn btn-primary-custom btn-sm mt-3"><i class="fas fa-hand-holding me-1"></i> Request Food Help</a>
+          </div>
+        </div>
+
+        <!-- 2. Medical Support -->
+        <div class="col-md-6 col-lg-4" id="medical" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card glass-card">
+            <div>
+              <div class="icon-wrapper" style="color: #4CAF50;"><i class="fas fa-user-md"></i></div>
+              <h4 class="fw-bold">2. Medical Support</h4>
+              <p class="text-muted">Doctor consultations, free medication supply, hospital admission assistance, and blood donation matching.</p>
+            </div>
+            <a href="medical-support.html" class="btn btn-primary-custom btn-sm mt-3"><i class="fas fa-stethoscope me-1"></i> Open Medical Hub</a>
+          </div>
+        </div>
+
+        <!-- 3. Education Support -->
+        <div class="col-md-6 col-lg-4" id="education" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card glass-card">
+            <div>
+              <div class="icon-wrapper" style="color: #FFC107;"><i class="fas fa-graduation-cap"></i></div>
+              <h4 class="fw-bold">3. Education Support</h4>
+              <p class="text-muted">Student scholarship grants, free evening tuition classes, career mentoring, and digital device provision.</p>
+            </div>
+            <a href="education-support.html" class="btn btn-primary-custom btn-sm mt-3"><i class="fas fa-book-open me-1"></i> Open Education Hub</a>
+          </div>
+        </div>
+
+        <!-- 4. Emergency Help -->
+        <div class="col-md-6 col-lg-4" id="emergency-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card glass-card border-danger">
+            <div>
+              <div class="icon-wrapper text-danger" style="background: rgba(220, 53, 69, 0.15);"><i class="fas fa-ambulance"></i></div>
+              <h4 class="fw-bold text-danger">4. Emergency Relief</h4>
+              <p class="text-muted">Immediate disaster response for floods, fires, cyclones, and accidents with rapid response volunteer teams.</p>
+            </div>
+            <a href="emergency.html" class="btn btn-danger text-white rounded-pill btn-sm mt-3"><i class="fas fa-bolt me-1"></i> SOS Emergency Hub</a>
+          </div>
+        </div>
+
+        <!-- 5. Clothing Donation -->
+        <div class="col-md-6 col-lg-4" id="clothing" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-card glass-card">
+            <div>
+              <div class="icon-wrapper"><i class="fas fa-tshirt"></i></div>
+              <h4 class="fw-bold">5. Clothing Donation</h4>
+              <p class="text-muted">Collecting, washing, and distributing warm winter clothes, school uniforms, and casual attire for children and adults.</p>
+            </div>
+            <a href="donate.html?item=clothes" class="btn btn-outline-custom btn-sm mt-3"><i class="fas fa-box me-1"></i> Donate Clothes</a>
+          </div>
+        </div>
+
+        <!-- 6. Book Donation -->
+        <div class="col-md-6 col-lg-4" id="books" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-card glass-card">
+            <div>
+              <div class="icon-wrapper"><i class="fas fa-book"></i></div>
+              <h4 class="fw-bold">6. Book Donation</h4>
+              <p class="text-muted">Building community libraries and distributing textbooks, storybooks, and competitive exam guides to students.</p>
+            </div>
+            <a href="donate.html?item=books" class="btn btn-outline-custom btn-sm mt-3"><i class="fas fa-book me-1"></i> Donate Books</a>
+          </div>
+        </div>
+
+        <!-- 7. Senior Citizen Care -->
+        <div class="col-md-6 col-lg-4" id="senior" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-card glass-card">
+            <div>
+              <div class="icon-wrapper"><i class="fas fa-blind"></i></div>
+              <h4 class="fw-bold">7. Senior Citizen Care</h4>
+              <p class="text-muted">Home visitation, healthcare support, grocery runs, and emotional companionship for elderly citizens living alone.</p>
+            </div>
+            <a href="request-help.html?category=Senior" class="btn btn-outline-custom btn-sm mt-3"><i class="fas fa-heart me-1"></i> Senior Support</a>
+          </div>
+        </div>
+
+        <!-- 8. Women Support -->
+        <div class="col-md-6 col-lg-4" id="women" data-aos="fade-up" data-aos-delay="700">
+          <div class="service-card glass-card">
+            <div>
+              <div class="icon-wrapper"><i class="fas fa-female"></i></div>
+              <h4 class="fw-bold">8. Women Support</h4>
+              <p class="text-muted">Legal assistance, skill development workshops, maternity health guidance, and emergency safety support.</p>
+            </div>
+            <a href="request-help.html?category=Women" class="btn btn-outline-custom btn-sm mt-3"><i class="fas fa-shield-alt me-1"></i> Women Helpline</a>
+          </div>
+        </div>
+
+        <!-- 9. Child Welfare -->
+        <div class="col-md-6 col-lg-4" id="welfare" data-aos="fade-up" data-aos-delay="800">
+          <div class="service-card glass-card">
+            <div>
+              <div class="icon-wrapper"><i class="fas fa-child"></i></div>
+              <h4 class="fw-bold">9. Child Welfare</h4>
+              <p class="text-muted">Protecting child rights, nutritional support for malnourished infants, and recreational activity drives.</p>
+            </div>
+            <a href="request-help.html?category=Child" class="btn btn-outline-custom btn-sm mt-3"><i class="fas fa-child me-1"></i> Child Welfare</a>
+          </div>
+        </div>
+
+        <!-- 10. Animal Rescue -->
+        <div class="col-md-6 col-lg-4" id="animal" data-aos="fade-up" data-aos-delay="900">
+          <div class="service-card glass-card">
+            <div>
+              <div class="icon-wrapper"><i class="fas fa-paw"></i></div>
+              <h4 class="fw-bold">10. Animal Rescue</h4>
+              <p class="text-muted">Stray feeding drives, emergency veterinary medical care, anti-rabies vaccination camps, and adoption aid.</p>
+            </div>
+            <a href="request-help.html?category=Animal" class="btn btn-outline-custom btn-sm mt-3"><i class="fas fa-paw me-1"></i> Animal Rescue</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-section">
+    <div class="container text-center text-muted small">
+      <p class="mb-0">&copy; 2026 Community Help Hub. CESR Subject Project. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

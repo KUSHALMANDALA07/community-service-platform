@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Help | Community Help Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- STICKY NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top glass-navbar py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="../index.html">
+        <div class="stat-icon me-2 mb-0 d-inline-flex align-items-center justify-content-center" style="width: 42px; height: 42px; font-size: 1.2rem;">
+          <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <span>Community <span class="text-secondary">Help Hub</span></span>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarReq">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarReq">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="volunteer.html">Volunteer</a></li>
+          <li class="nav-item"><a class="nav-link active" href="request-help.html">Request Help</a></li>
+          <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu glass-card border-0 shadow-lg">
+              <li><a class="dropdown-item py-2" href="education-support.html"><i class="fas fa-graduation-cap text-primary me-2"></i> Education Support</a></li>
+              <li><a class="dropdown-item py-2" href="medical-support.html"><i class="fas fa-user-md text-success me-2"></i> Medical Support</a></li>
+              <li><a class="dropdown-item py-2" href="emergency.html"><i class="fas fa-ambulance text-danger me-2"></i> Emergency Hub</a></li>
+              <li><a class="dropdown-item py-2" href="events.html"><i class="fas fa-calendar-alt text-warning me-2"></i> Events</a></li>
+              <li><a class="dropdown-item py-2" href="success-stories.html"><i class="fas fa-star text-warning me-2"></i> Success Stories</a></li>
+              <li><a class="dropdown-item py-2" href="community-map.html"><i class="fas fa-map-marked-alt text-info me-2"></i> Community Map</a></li>
+              <li><a class="dropdown-item py-2" href="blog.html"><i class="fas fa-newspaper text-secondary me-2"></i> Blog & Awareness</a></li>
+              <li><a class="dropdown-item py-2" href="faq.html"><i class="fas fa-question-circle text-primary me-2"></i> FAQ</a></li>
+              <li><a class="dropdown-item py-2" href="contact.html"><i class="fas fa-envelope text-primary me-2"></i> Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center ms-lg-3 gap-2">
+          <button class="btn btn-sm btn-outline-secondary rounded-circle p-2" id="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="login.html" class="btn btn-outline-custom btn-sm">Login</a>
+          <a href="register.html" class="btn btn-primary-custom btn-sm">Register</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="py-5 bg-gradient-primary text-white text-center">
+    <div class="container py-3">
+      <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-semibold mb-2">We Are Here For You</span>
+      <h1 class="display-4 fw-bold">Submit a Help Request</h1>
+      <p class="lead opacity-90 max-w-700 mx-auto">
+        Fill out this confidential form. Our verified volunteer coordinators and NGO partner network will get in touch immediately.
+      </p>
+    </div>
+  </section>
+
+  <!-- FORM SECTION -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="glass-card p-4 p-md-5">
+            <div class="d-flex align-items-center mb-4">
+              <div class="stat-icon me-3 mb-0"><i class="fas fa-hand-holding-water"></i></div>
+              <div>
+                <h3 class="fw-bold mb-0">Help Request Form</h3>
+                <small class="text-muted">All requests are prioritized based on urgency and verified by local leaders.</small>
+              </div>
+            </div>
+
+            <form id="request-help-form">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control form-control-custom" placeholder="e.g. Rahul Sharma" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Email Address <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control form-control-custom" placeholder="rahul@example.com" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Phone Number <span class="text-danger">*</span></label>
+                  <input type="tel" class="form-control form-control-custom" placeholder="+91 98765 43210" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Help Category <span class="text-danger">*</span></label>
+                  <select class="form-select form-control-custom" required>
+                    <option value="" selected disabled>Select category...</option>
+                    <option value="Food">Food Assistance</option>
+                    <option value="Medical">Medical Support</option>
+                    <option value="Education">Education Support</option>
+                    <option value="Emergency">Emergency Relief</option>
+                    <option value="Books">Books & Supplies</option>
+                    <option value="Clothes">Clothing</option>
+                    <option value="Financial">Financial Aid</option>
+                    <option value="Senior">Senior Citizen Care</option>
+                    <option value="Women">Women Safety & Support</option>
+                    <option value="Child">Child Welfare</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Urgency Level <span class="text-danger">*</span></label>
+                  <select class="form-select form-control-custom" required>
+                    <option value="Low">Low (Within 5-7 days)</option>
+                    <option value="Medium" selected>Medium (Within 24-48 hours)</option>
+                    <option value="High">High (Same day relief)</option>
+                    <option value="Critical">CRITICAL EMERGENCY (Immediate)</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">City / Location <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control form-control-custom" placeholder="e.g. Sector 14, New Delhi" required>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold">Detailed Street Address <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control form-control-custom" placeholder="House/Flat No., Landmark, Zipcode" required>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold">Description of Situation <span class="text-danger">*</span></label>
+                  <textarea class="form-control form-control-custom" rows="4" placeholder="Please describe the help required, number of beneficiaries, medical condition if any, etc." required></textarea>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold">Upload Document / Photo (Optional)</label>
+                  <input type="file" class="form-control form-control-custom" accept="image/*,.pdf">
+                  <small class="text-muted">Prescriptions, ID proof, or situational photos (Max 5MB).</small>
+                </div>
+
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-primary-custom btn-lg w-100 py-3"><i class="fas fa-paper-plane me-2"></i> Submit Help Request</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-section">
+    <div class="container text-center text-muted small">
+      <p class="mb-0">&copy; 2026 Community Help Hub. CESR Subject Project. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

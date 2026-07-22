@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Dashboard | Community Help Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="d-flex">
+    
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar" style="width: 260px;">
+      <div class="d-flex align-items-center mb-4 px-2">
+        <div class="stat-icon me-2 mb-0" style="width: 36px; height: 36px; font-size: 1rem; color: var(--secondary-color); background: rgba(76,175,80,0.15);"><i class="fas fa-hands-helping"></i></div>
+        <h5 class="fw-bold text-success mb-0">Volunteer <span class="badge bg-success text-white fs-8">Portal</span></h5>
+      </div>
+
+      <nav class="nav flex-column">
+        <a class="admin-nav-item active" href="volunteer-dashboard.html"><i class="fas fa-user-circle"></i> My Profile</a>
+        <a class="admin-nav-item" href="#assigned"><i class="fas fa-tasks"></i> Assigned Tasks</a>
+        <a class="admin-nav-item" href="#badges"><i class="fas fa-trophy"></i> Badges & Ranking</a>
+        <a class="admin-nav-item" href="#certificate" data-bs-toggle="modal" data-bs-target="#certModal"><i class="fas fa-certificate text-warning"></i> CESR Certificate</a>
+        <a class="admin-nav-item" href="../index.html"><i class="fas fa-globe"></i> Back to Main Site</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow-1 p-4" style="background: var(--bg-main);">
+      
+      <!-- TOP BAR -->
+      <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <div class="d-flex align-items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Volunteer Profile" class="rounded-circle border border-2 border-success" width="55" height="55" style="object-fit: cover;">
+          <div>
+            <h4 class="fw-bold mb-0">Ananya Roy <span class="badge bg-warning text-dark fs-8 ms-1"><i class="fas fa-crown"></i> Rank #4</span></h4>
+            <small class="text-muted">Verified CESR Volunteer • Member since Jan 2026</small>
+          </div>
+        </div>
+        <div>
+          <button class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#certModal"><i class="fas fa-download me-1"></i> Download CESR Certificate</button>
+        </div>
+      </div>
+
+      <!-- VOLUNTEER METRIC CARDS -->
+      <div class="row g-4 mb-4">
+        
+        <div class="col-md-3">
+          <div class="stat-card">
+            <i class="fas fa-stopwatch text-success fs-3 mb-2"></i>
+            <h3 class="fw-bold mb-0 text-success">68.5</h3>
+            <small class="text-muted">Volunteer Hours Logged</small>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="stat-card">
+            <i class="fas fa-check-double text-primary fs-3 mb-2"></i>
+            <h3 class="fw-bold mb-0 text-primary">24</h3>
+            <small class="text-muted">Completed Relief Tasks</small>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="stat-card">
+            <i class="fas fa-fire text-danger fs-3 mb-2"></i>
+            <h3 class="fw-bold mb-0 text-danger">4</h3>
+            <small class="text-muted">Emergency SOS Rescues</small>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="stat-card">
+            <i class="fas fa-medal text-warning fs-3 mb-2"></i>
+            <h3 class="fw-bold mb-0 text-warning">3 Badges</h3>
+            <small class="text-muted">Achievements Unlocked</small>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- HOURS CHART & BADGES -->
+      <div class="row g-4 mb-4">
+        <div class="col-lg-7">
+          <div class="glass-card p-4">
+            <h5 class="fw-bold mb-3"><i class="fas fa-chart-line text-success me-2"></i> Weekly Hours Contributed</h5>
+            <canvas id="volunteerHoursChart" height="150"></canvas>
+          </div>
+        </div>
+        <div class="col-lg-5" id="badges">
+          <div class="glass-card p-4">
+            <h5 class="fw-bold mb-3"><i class="fas fa-award text-warning me-2"></i> Badges & Honors</h5>
+            <div class="d-flex flex-column gap-3">
+              
+              <div class="d-flex align-items-center p-2 rounded-3 bg-warning bg-opacity-10 border border-warning">
+                <i class="fas fa-crown text-warning fs-2 me-3"></i>
+                <div>
+                  <h6 class="fw-bold mb-0">Gold Social Contributor</h6>
+                  <small class="text-muted">Completed 50+ Verified Social Service Hours.</small>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center p-2 rounded-3 bg-danger bg-opacity-10 border border-danger">
+                <i class="fas fa-bolt text-danger fs-2 me-3"></i>
+                <div>
+                  <h6 class="fw-bold mb-0">Emergency SOS Hero</h6>
+                  <small class="text-muted">First responder in 3+ urgent flood/disaster alerts.</small>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center p-2 rounded-3 bg-primary bg-opacity-10 border border-primary">
+                <i class="fas fa-graduation-cap text-primary fs-2 me-3"></i>
+                <div>
+                  <h6 class="fw-bold mb-0">Master Tutor</h6>
+                  <small class="text-muted">Taught 15+ hours of free evening classes.</small>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ASSIGNED TASKS TABLE -->
+      <div class="glass-card p-4" id="assigned">
+        <h5 class="fw-bold mb-3"><i class="fas fa-tasks text-primary me-2"></i> My Assigned Tasks</h5>
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0 small">
+            <thead class="table-light">
+              <tr>
+                <th>Task ID</th>
+                <th>Task Name</th>
+                <th>Category</th>
+                <th>Location</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>#TSK-104</strong></td>
+                <td>Deliver 5 Ration Kits</td>
+                <td><span class="badge bg-success">Food Drive</span></td>
+                <td>Sector 8, Dwarka</td>
+                <td><span class="badge bg-warning text-dark">In Progress</span></td>
+                <td><button class="btn btn-sm btn-success" onclick="alert('Task marked as Completed! Hours added.');">Mark Done</button></td>
+              </tr>
+              <tr>
+                <td><strong>#TSK-092</strong></td>
+                <td>Blood Donor Transport Assistance</td>
+                <td><span class="badge bg-danger">Medical</span></td>
+                <td>City Hospital ICU</td>
+                <td><span class="badge bg-success">Completed</span></td>
+                <td><span class="text-success"><i class="fas fa-check-circle"></i> Done</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- CERTIFICATE GENERATOR MODAL -->
+  <div class="modal fade" id="certModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content glass-card border-0">
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold text-success"><i class="fas fa-certificate text-warning me-2"></i> Official CESR Volunteer Certificate</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4 text-center">
+          
+          <div class="p-4 border border-4 border-success rounded-4 bg-white text-dark shadow-sm position-relative">
+            <div class="position-absolute top-0 start-0 p-3 opacity-25"><i class="fas fa-university fs-1"></i></div>
+            <div class="position-absolute top-0 end-0 p-3 text-warning fs-2"><i class="fas fa-award"></i></div>
+            
+            <h6 class="text-uppercase tracking-wider text-muted mb-1">CERTIFICATE OF APPRECIATION</h6>
+            <h2 class="fw-bold text-success mb-2">COMMUNITY HELP HUB</h2>
+            <p class="small text-secondary mb-3">College Subject: Community Engagement and Social Responsibility (CESR)</p>
+            
+            <p class="mb-1">This is to proudly certify that</p>
+            <h3 class="fw-extrabold text-primary my-2">ANANYA ROY</h3>
+            <p class="max-w-600 mx-auto small text-muted">
+              has successfully completed <strong>68.5 hours</strong> of voluntary community relief work, contributing to food distribution, emergency SOS support, and educational tutoring.
+            </p>
+
+            <div class="d-flex justify-content-between align-items-end mt-4 pt-3 border-top small">
+              <div class="text-start">
+                <span class="fw-bold d-block">Dr. A. K. Sharma</span>
+                <span class="text-muted">CESR Academic Supervisor</span>
+              </div>
+              <div class="text-end">
+                <span class="fw-bold d-block">CHH-CERT-2026-9481</span>
+                <span class="text-muted">Verification ID</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <button class="btn btn-primary-custom px-4" onclick="triggerCertDownload();"><i class="fas fa-download me-1"></i> Save & Download PDF/Text Certificate</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../assets/js/charts.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    function triggerCertDownload() {
+      const text = "COMMUNITY HELP HUB - OFFICIAL CESR VOLUNTEER CERTIFICATE\n--------------------------------------------------\nVolunteer Name: Ananya Roy\nHours Logged: 68.5 Hours\nSubject: Community Engagement and Social Responsibility\nCertificate ID: CHH-CERT-2026-9481\nStatus: VERIFIED & RECOGNIZED";
+      const blob = new Blob([text], { type: 'text/plain' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'Ananya_Roy_CESR_Volunteer_Certificate.txt';
+      a.click();
+    }
+  </script>
+</body>
+</html>

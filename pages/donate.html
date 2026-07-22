@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | Community Help Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    /* Stepper Styling */
+    .step-item {
+      position: relative;
+      flex: 1;
+      text-align: center;
+    }
+    .step-item::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      width: 100%;
+      height: 3px;
+      background: var(--border-color);
+      z-index: 1;
+    }
+    .step-item:last-child::after {
+      display: none;
+    }
+    .step-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.5rem;
+      position: relative;
+      z-index: 2;
+      font-weight: 700;
+    }
+    .step-item.active .step-circle {
+      background: var(--primary-color);
+      color: #fff;
+      border-color: var(--primary-color);
+    }
+    .step-item.completed .step-circle {
+      background: var(--secondary-color);
+      color: #fff;
+      border-color: var(--secondary-color);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top glass-navbar py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="../index.html">
+        <div class="stat-icon me-2 mb-0 d-inline-flex align-items-center justify-content-center" style="width: 42px; height: 42px; font-size: 1.2rem;">
+          <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <span>Community <span class="text-secondary">Help Hub</span></span>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDonate">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarDonate">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="volunteer.html">Volunteer</a></li>
+          <li class="nav-item"><a class="nav-link" href="request-help.html">Request Help</a></li>
+          <li class="nav-item"><a class="nav-link active" href="donate.html">Donate</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu glass-card border-0 shadow-lg">
+              <li><a class="dropdown-item py-2" href="education-support.html"><i class="fas fa-graduation-cap text-primary me-2"></i> Education Support</a></li>
+              <li><a class="dropdown-item py-2" href="medical-support.html"><i class="fas fa-user-md text-success me-2"></i> Medical Support</a></li>
+              <li><a class="dropdown-item py-2" href="emergency.html"><i class="fas fa-ambulance text-danger me-2"></i> Emergency Hub</a></li>
+              <li><a class="dropdown-item py-2" href="events.html"><i class="fas fa-calendar-alt text-warning me-2"></i> Events</a></li>
+              <li><a class="dropdown-item py-2" href="success-stories.html"><i class="fas fa-star text-warning me-2"></i> Success Stories</a></li>
+              <li><a class="dropdown-item py-2" href="community-map.html"><i class="fas fa-map-marked-alt text-info me-2"></i> Community Map</a></li>
+              <li><a class="dropdown-item py-2" href="blog.html"><i class="fas fa-newspaper text-secondary me-2"></i> Blog & Awareness</a></li>
+              <li><a class="dropdown-item py-2" href="faq.html"><i class="fas fa-question-circle text-primary me-2"></i> FAQ</a></li>
+              <li><a class="dropdown-item py-2" href="contact.html"><i class="fas fa-envelope text-primary me-2"></i> Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center ms-lg-3 gap-2">
+          <button class="btn btn-sm btn-outline-secondary rounded-circle p-2" id="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="login.html" class="btn btn-outline-custom btn-sm">Login</a>
+          <a href="register.html" class="btn btn-primary-custom btn-sm">Register</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="py-5 bg-gradient-primary text-white text-center">
+    <div class="container py-3">
+      <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-semibold mb-2">Empower Through Giving</span>
+      <h1 class="display-4 fw-bold">Donation Portal</h1>
+      <p class="lead opacity-90 max-w-700 mx-auto">
+        Donate items or financial support. We provide free door-step pickup and instant digital receipts.
+      </p>
+    </div>
+  </section>
+
+  <!-- DONATION CATEGORIES -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="text-primary fw-bold">Select What You Wish To Donate</span>
+        <h2 class="display-6 fw-bold">Donation Categories</h2>
+      </div>
+
+      <div class="row g-3 mb-5">
+        <div class="col-6 col-md-3" data-aos="zoom-in">
+          <div class="glass-card p-3 text-center h-100">
+            <i class="fas fa-utensils text-success display-5 mb-2"></i>
+            <h6 class="fw-bold">Food Kits</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="glass-card p-3 text-center h-100">
+            <i class="fas fa-book text-primary display-5 mb-2"></i>
+            <h6 class="fw-bold">Books & Stationery</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="glass-card p-3 text-center h-100">
+            <i class="fas fa-tshirt text-warning display-5 mb-2"></i>
+            <h6 class="fw-bold">Clothes & Blankets</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
+          <div class="glass-card p-3 text-center h-100">
+            <i class="fas fa-pills text-danger display-5 mb-2"></i>
+            <h6 class="fw-bold">Medicines</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="400">
+          <div class="glass-card p-3 text-center h-100">
+            <i class="fas fa-laptop text-info display-5 mb-2"></i>
+            <h6 class="fw-bold">Electronics / Devices</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="500">
+          <div class="glass-card p-3 text-center h-100">
+            <i class="fas fa-couch text-secondary display-5 mb-2"></i>
+            <h6 class="fw-bold">Furniture</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="600">
+          <div class="glass-card p-3 text-center h-100">
+            <i class="fas fa-coins text-warning display-5 mb-2"></i>
+            <h6 class="fw-bold">Financial Aid</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="700">
+          <div class="glass-card p-3 text-center h-100">
+            <i class="fas fa-gift text-success display-5 mb-2"></i>
+            <h6 class="fw-bold">General Relief</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- DONATION FORM -->
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="glass-card p-4 p-md-5">
+            <h3 class="fw-bold mb-4"><i class="fas fa-box-open text-primary me-2"></i> Schedule Item Pickup / Money Transfer</h3>
+
+            <form id="donate-form">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Donation Type <span class="text-danger">*</span></label>
+                  <select class="form-select form-control-custom" required>
+                    <option value="Food">Food / Ration Kits</option>
+                    <option value="Books">Books & Stationery</option>
+                    <option value="Clothes">Clothing & Shoes</option>
+                    <option value="Medicines">Unused Medicines</option>
+                    <option value="Electronics">Laptops / Tablets</option>
+                    <option value="Money">Financial Contribution</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Item Name / Amount <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control form-control-custom" placeholder="e.g. 10 Winter Jackets or ₹1,000" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Quantity / Condition <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control form-control-custom" placeholder="e.g. 5 boxes, Gently Used / New" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Preferred Pickup Date <span class="text-danger">*</span></label>
+                  <input type="date" class="form-control form-control-custom" required>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold">Pickup Address <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control form-control-custom" placeholder="Flat/House No., Street Name, Zipcode" required>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold">Photo of Item (Optional)</label>
+                  <input type="file" class="form-control form-control-custom" accept="image/*">
+                </div>
+
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-accent-custom btn-lg w-100 py-3 fw-bold"><i class="fas fa-hand-holding-heart me-2"></i> Submit Donation & Download Receipt</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- DONATION TRACKING STEPPER DEMO -->
+      <div class="row justify-content-center mt-5" data-aos="fade-up">
+        <div class="col-lg-10">
+          <div class="glass-card p-4">
+            <h5 class="fw-bold mb-4 text-center">Live Donation Status Tracker (Demo ID #DON-8942)</h5>
+            <div class="d-flex justify-content-between position-relative">
+              <div class="step-item completed">
+                <div class="step-circle"><i class="fas fa-check"></i></div>
+                <small class="fw-bold d-block">Pending</small>
+              </div>
+              <div class="step-item completed">
+                <div class="step-circle"><i class="fas fa-check"></i></div>
+                <small class="fw-bold d-block">Accepted</small>
+              </div>
+              <div class="step-item active">
+                <div class="step-circle"><i class="fas fa-truck"></i></div>
+                <small class="fw-bold d-block">Collected</small>
+              </div>
+              <div class="step-item">
+                <div class="step-circle">4</div>
+                <small class="fw-bold d-block">Delivered</small>
+              </div>
+              <div class="step-item">
+                <div class="step-circle">5</div>
+                <small class="fw-bold d-block">Completed</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-section">
+    <div class="container text-center text-muted small">
+      <p class="mb-0">&copy; 2026 Community Help Hub. CESR Subject Project. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

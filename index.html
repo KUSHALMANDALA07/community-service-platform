@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Community Help Hub - Connecting Communities Through Compassion and Technology. CESR Academic Project.">
+  <title>Community Help Hub | NGO Platform</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- TOP ANNOUNCEMENT BAR (CESR PROJECT INFO) -->
+  <div class="bg-gradient-primary text-white py-2 px-3 text-center fs-7">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <span><i class="fas fa-university me-2"></i> <strong>CESR Academic Project:</strong> Community Engagement and Social Responsibility</span>
+      <div>
+        <a href="pages/emergency.html" class="badge bg-danger text-white text-decoration-none me-2"><i class="fas fa-phone-alt me-1"></i> 24/7 Helpline: 1800-COMMUNITY</a>
+        <a href="admin/index.html" class="text-white text-decoration-none small"><i class="fas fa-user-shield me-1"></i> Admin Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY GLASS NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top glass-navbar py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <div class="stat-icon me-2 mb-0 d-inline-flex align-items-center justify-content-center" style="width: 42px; height: 42px; font-size: 1.2rem;">
+          <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <span>Community <span class="text-secondary">Help Hub</span></span>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/volunteer.html">Volunteer</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/request-help.html">Request Help</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/donate.html">Donate</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu glass-card border-0 shadow-lg">
+              <li><a class="dropdown-item py-2" href="pages/education-support.html"><i class="fas fa-graduation-cap text-primary me-2"></i> Education Support</a></li>
+              <li><a class="dropdown-item py-2" href="pages/medical-support.html"><i class="fas fa-user-md text-success me-2"></i> Medical Support</a></li>
+              <li><a class="dropdown-item py-2" href="pages/emergency.html"><i class="fas fa-ambulance text-danger me-2"></i> Emergency Hub</a></li>
+              <li><a class="dropdown-item py-2" href="pages/events.html"><i class="fas fa-calendar-alt text-warning me-2"></i> Events</a></li>
+              <li><a class="dropdown-item py-2" href="pages/success-stories.html"><i class="fas fa-star text-warning me-2"></i> Success Stories</a></li>
+              <li><a class="dropdown-item py-2" href="pages/community-map.html"><i class="fas fa-map-marked-alt text-info me-2"></i> Community Map</a></li>
+              <li><a class="dropdown-item py-2" href="pages/blog.html"><i class="fas fa-newspaper text-secondary me-2"></i> Blog & Awareness</a></li>
+              <li><a class="dropdown-item py-2" href="pages/faq.html"><i class="fas fa-question-circle text-primary me-2"></i> FAQ</a></li>
+              <li><a class="dropdown-item py-2" href="pages/contact.html"><i class="fas fa-envelope text-primary me-2"></i> Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center ms-lg-3 gap-2">
+          <button class="btn btn-sm btn-outline-secondary rounded-circle p-2" id="dark-mode-toggle" title="Toggle Dark/Light Mode">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="pages/login.html" class="btn btn-outline-custom btn-sm">Login</a>
+          <a href="pages/register.html" class="btn btn-primary-custom btn-sm">Register</a>
+          <button class="btn btn-sos btn-sm btn-sos-trigger ms-1"><i class="fas fa-exclamation-triangle me-1"></i> SOS</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="py-5 position-relative overflow-hidden">
+    <div class="container py-lg-4">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill fw-semibold mb-3">
+            <i class="fas fa-heart me-1"></i> NGO & Social Welfare Platform
+          </span>
+          <h1 class="display-4 fw-extrabold mb-3">
+            Together We Can <br><span class="text-gradient">Build Stronger</span> Communities
+          </h1>
+          <p class="lead text-muted mb-4 fs-5">
+            <span id="typed-tagline">Connecting Communities Through Compassion and Technology</span>
+          </p>
+          <p class="text-secondary mb-4">
+            Welcome to <strong>Community Help Hub</strong>, a dedicated digital platform designed to bridge the gap between people in need and compassionate volunteers, food banks, medical aids, and donors.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="pages/request-help.html" class="btn btn-primary-custom btn-lg"><i class="fas fa-hand-holding-water me-2"></i> Request Help</a>
+            <a href="pages/volunteer.html" class="btn btn-outline-custom btn-lg"><i class="fas fa-hands-helping me-2"></i> Become Volunteer</a>
+            <a href="pages/donate.html" class="btn btn-accent-custom btn-lg"><i class="fas fa-donate me-2"></i> Donate Now</a>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <div class="avatar-group d-flex">
+              <span class="badge rounded-circle bg-primary text-white p-2 border border-2 border-white me-n2"><i class="fas fa-user"></i></span>
+              <span class="badge rounded-circle bg-success text-white p-2 border border-2 border-white me-n2"><i class="fas fa-user"></i></span>
+              <span class="badge rounded-circle bg-warning text-dark p-2 border border-2 border-white"><i class="fas fa-user"></i></span>
+            </div>
+            <span class="small text-muted">Joined by <strong>2,500+</strong> local citizens & volunteers this month</span>
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-center" data-aos="fade-left">
+          <div class="position-relative">
+            <div class="glass-card p-4 rounded-4 shadow-lg floating-element">
+              <svg viewBox="0 0 500 400" width="100%" height="auto" class="rounded-4">
+                <defs>
+                  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#2E8B57;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#4CAF50;stop-opacity:1" />
+                  </linearGradient>
+                  <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#FFC107;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#ff9800;stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+                <!-- SVG Illustration background & graphics -->
+                <rect width="500" height="400" rx="20" fill="url(#grad1)" opacity="0.08"/>
+                <circle cx="250" cy="180" r="110" fill="url(#grad1)" opacity="0.2"/>
+                <path d="M 150 280 C 200 180, 300 180, 350 280 Z" fill="url(#grad1)"/>
+                <!-- Heart Icon Graphic in Center -->
+                <path d="M 250 140 C 250 140, 210 90, 170 120 C 130 150, 180 200, 250 240 C 320 200, 370 150, 330 120 C 290 90, 250 140, 250 140 Z" fill="url(#grad2)"/>
+                <!-- People silhouettes -->
+                <circle cx="170" cy="240" r="25" fill="#2E8B57"/>
+                <circle cx="330" cy="240" r="25" fill="#4CAF50"/>
+                <circle cx="250" cy="210" r="30" fill="#FFC107"/>
+                <!-- Text on Illustration -->
+                <text x="250" y="340" text-anchor="middle" fill="#2E8B57" font-size="22" font-weight="bold" font-family="Poppins">COMMUNITY HELP HUB</text>
+                <text x="250" y="365" text-anchor="middle" fill="#6c757d" font-size="14" font-family="Poppins">CESR Social Responsibility Initiative</text>
+              </svg>
+            </div>
+            <!-- Floating badge -->
+            <div class="glass-card position-absolute top-0 start-0 translate-middle p-3 shadow rounded-4 d-none d-sm-block text-start" style="width: 190px;">
+              <div class="d-flex align-items-center">
+                <i class="fas fa-shield-alt text-success fs-3 me-2"></i>
+                <div>
+                  <h6 class="mb-0 fw-bold">Verified Relief</h6>
+                  <small class="text-muted">100% Transparency</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANIMATED STATISTICS (COUNTUP) -->
+  <section class="py-5 bg-gradient-primary text-white">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-md-4 col-lg-2-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="p-3">
+            <i class="fas fa-users fs-1 text-warning mb-2"></i>
+            <h2 class="stat-number display-5 fw-bold text-white mb-0" data-target="1200" data-suffix="+">1200+</h2>
+            <p class="mb-0 text-white-50 fw-medium">People Helped</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="p-3">
+            <i class="fas fa-hands-helping fs-1 text-warning mb-2"></i>
+            <h2 class="stat-number display-5 fw-bold text-white mb-0" data-target="450" data-suffix="+">450+</h2>
+            <p class="mb-0 text-white-50 fw-medium">Volunteers</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="p-3">
+            <i class="fas fa-utensils fs-1 text-warning mb-2"></i>
+            <h2 class="stat-number display-5 fw-bold text-white mb-0" data-target="950" data-suffix="+">950+</h2>
+            <p class="mb-0 text-white-50 fw-medium">Food Donations</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2-4" data-aos="zoom-in" data-aos-delay="400">
+          <div class="p-3">
+            <i class="fas fa-ambulance fs-1 text-warning mb-2"></i>
+            <h2 class="stat-number display-5 fw-bold text-white mb-0" data-target="320" data-suffix="+">320+</h2>
+            <p class="mb-0 text-white-50 fw-medium">Medical Cases</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2-4" data-aos="zoom-in" data-aos-delay="500">
+          <div class="p-3">
+            <i class="fas fa-book fs-1 text-warning mb-2"></i>
+            <h2 class="stat-number display-5 fw-bold text-white mb-0" data-target="1800" data-suffix="+">1800+</h2>
+            <p class="mb-0 text-white-50 fw-medium">Books Donated</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED SERVICES SECTION -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+        <span class="text-primary fw-bold text-uppercase tracking-wider">What We Provide</span>
+        <h2 class="display-5 fw-bold">Comprehensive Community Services</h2>
+        <p class="text-muted">Explore our key relief channels designed to empower vulnerable communities, children, and elderly citizens.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Service Card 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card glass-card">
+            <div>
+              <div class="icon-wrapper"><i class="fas fa-utensils"></i></div>
+              <h4 class="fw-bold mb-2">Food Assistance</h4>
+              <p class="text-muted">Providing daily nutritious meals, ration kits, and emergency food drives to underprivileged families.</p>
+            </div>
+            <a href="pages/services.html#food" class="btn btn-outline-custom btn-sm mt-3 w-100">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card glass-card">
+            <div>
+              <div class="icon-wrapper"><i class="fas fa-heartbeat"></i></div>
+              <h4 class="fw-bold mb-2">Medical Support</h4>
+              <p class="text-muted">Free health checkup camps, blood donation matching, medicine assistance, and ambulance support.</p>
+            </div>
+            <a href="pages/medical-support.html" class="btn btn-outline-custom btn-sm mt-3 w-100">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card glass-card">
+            <div>
+              <div class="icon-wrapper"><i class="fas fa-graduation-cap"></i></div>
+              <h4 class="fw-bold mb-2">Education Support</h4>
+              <p class="text-muted">Sponsoring scholarships, book donations, free tuition sessions, and digital literacy workshops.</p>
+            </div>
+            <a href="pages/education-support.html" class="btn btn-outline-custom btn-sm mt-3 w-100">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-card glass-card">
+            <div>
+              <div class="icon-wrapper"><i class="fas fa-exclamation-triangle"></i></div>
+              <h4 class="fw-bold mb-2">Emergency Relief</h4>
+              <p class="text-muted">Rapid disaster response for floods, fires, cyclones, and road accidents with 24/7 volunteer networks.</p>
+            </div>
+            <a href="pages/emergency.html" class="btn btn-outline-custom btn-sm mt-3 w-100">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Card 5 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-card glass-card">
+            <div>
+              <div class="icon-wrapper"><i class="fas fa-tshirt"></i></div>
+              <h4 class="fw-bold mb-2">Clothing & Supplies</h4>
+              <p class="text-muted">Collecting, sanitizing, and distributing seasonal clothing, blankets, and footwear for needy citizens.</p>
+            </div>
+            <a href="pages/services.html#clothing" class="btn btn-outline-custom btn-sm mt-3 w-100">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Card 6 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-card glass-card">
+            <div>
+              <div class="icon-wrapper"><i class="fas fa-hands"></i></div>
+              <h4 class="fw-bold mb-2">Senior & Child Welfare</h4>
+              <p class="text-muted">Dedicated companionship, mental health guidance, and nutrition care for seniors and children.</p>
+            </div>
+            <a href="pages/services.html#welfare" class="btn btn-outline-custom btn-sm mt-3 w-100">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- URGENT EMERGENCY BANNER -->
+  <section class="py-4 bg-danger text-white">
+    <div class="container">
+      <div class="row align-items-center text-center text-md-start gy-3">
+        <div class="col-md-8">
+          <h3 class="fw-bold mb-1"><i class="fas fa-bullhorn me-2"></i> Immediate Emergency or Disaster Response Needed?</h3>
+          <p class="mb-0 opacity-90">Send a priority alert to local volunteer teams and registered NGO emergency dispatchers.</p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <a href="pages/emergency.html" class="btn btn-light text-danger fw-bold rounded-pill px-4 py-2"><i class="fas fa-bolt me-1"></i> Launch Emergency SOS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED EVENTS & MAP PREVIEW -->
+  <section class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="row align-items-center mb-5">
+        <div class="col-md-8">
+          <span class="text-primary fw-bold text-uppercase">Upcoming Action</span>
+          <h2 class="display-6 fw-bold mb-0">Join Our Latest Community Events</h2>
+        </div>
+        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+          <a href="pages/events.html" class="btn btn-outline-custom">View All Events <i class="fas fa-calendar-alt ms-1"></i></a>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="event-card glass-card">
+            <div class="event-img-wrap">
+              <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=600&q=80" alt="Blood Drive">
+              <span class="event-date-badge">JUL 28, 2026</span>
+            </div>
+            <div class="p-4">
+              <h5 class="fw-bold">Mega Blood Donation Drive</h5>
+              <p class="text-muted small"><i class="fas fa-map-marker-alt text-danger me-1"></i> Central City Hospital Center</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="badge bg-success bg-opacity-10 text-success">45 Seats Left</span>
+                <a href="pages/events.html" class="btn btn-primary-custom btn-sm">Register</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="event-card glass-card">
+            <div class="event-img-wrap">
+              <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=600&q=80" alt="Food Drive">
+              <span class="event-date-badge">AUG 02, 2026</span>
+            </div>
+            <div class="p-4">
+              <h5 class="fw-bold">Zero Hunger Food Distribution</h5>
+              <p class="text-muted small"><i class="fas fa-map-marker-alt text-danger me-1"></i> Metro Community Shelter</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="badge bg-success bg-opacity-10 text-success">80 Seats Left</span>
+                <a href="pages/events.html" class="btn btn-primary-custom btn-sm">Register</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="event-card glass-card">
+            <div class="event-img-wrap">
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" alt="Tree Plantation">
+              <span class="event-date-badge">AUG 10, 2026</span>
+            </div>
+            <div class="p-4">
+              <h5 class="fw-bold">Clean & Green Plantation Camp</h5>
+              <p class="text-muted small"><i class="fas fa-map-marker-alt text-danger me-1"></i> Riverside Eco Park</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="badge bg-success bg-opacity-10 text-success">120 Seats Left</span>
+                <a href="pages/events.html" class="btn btn-primary-custom btn-sm">Register</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE CHAT WIDGET BUTTON & DRAWER -->
+  <div id="live-chat-toggle" title="Chat with Assistant">
+    <i class="fas fa-comments"></i>
+  </div>
+
+  <div class="chat-box-widget d-none" id="chat-widget">
+    <div class="chat-header">
+      <div class="d-flex align-items-center">
+        <i class="fas fa-robot me-2"></i>
+        <div>
+          <h6 class="mb-0 fw-bold">Community AI Assistant</h6>
+          <small class="opacity-75">Online • 24/7 Support</small>
+        </div>
+      </div>
+      <button class="btn-close btn-close-white" id="close-chat"></button>
+    </div>
+    <div class="chat-body" id="chat-body-messages">
+      <div class="chat-msg bot">
+        Hello! Welcome to Community Help Hub. How can I assist you today?
+      </div>
+    </div>
+    <div class="chat-footer d-flex gap-2">
+      <input type="text" class="form-control form-control-sm" id="chat-input-field" placeholder="Type your query...">
+      <button class="btn btn-primary-custom btn-sm" id="send-chat-msg"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-primary mb-3"><i class="fas fa-hand-holding-heart me-2"></i>Community Help Hub</h5>
+          <p class="text-muted small">
+            "Connecting Communities Through Compassion and Technology"<br>
+            Created for the college subject: <strong>Community Engagement and Social Responsibility (CESR)</strong>.
+          </p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold mb-3">Quick Links</h6>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="pages/about.html" class="footer-link">About Us</a>
+          <a href="pages/services.html" class="footer-link">Services</a>
+          <a href="pages/volunteer.html" class="footer-link">Volunteer</a>
+          <a href="pages/donate.html" class="footer-link">Donate Now</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3">Support Hubs</h6>
+          <a href="pages/education-support.html" class="footer-link">Education Support</a>
+          <a href="pages/medical-support.html" class="footer-link">Medical Relief</a>
+          <a href="pages/emergency.html" class="footer-link">Emergency SOS</a>
+          <a href="pages/community-map.html" class="footer-link">NGO Location Map</a>
+          <a href="pages/faq.html" class="footer-link">Help & FAQs</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3">Newsletter</h6>
+          <p class="text-muted small">Subscribe for weekly social service updates and event drives.</p>
+          <form class="d-flex gap-2">
+            <input type="email" class="form-control form-control-sm form-control-custom" placeholder="Enter your email" required>
+            <button class="btn btn-primary-custom btn-sm"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="my-4 text-muted opacity-25">
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-muted small">
+        <p class="mb-0">&copy; 2026 Community Help Hub. College CESR Subject Project. All Rights Reserved.</p>
+        <div class="d-flex gap-3 mt-2 mt-md-0">
+          <a href="pages/faq.html" class="text-muted text-decoration-none">Privacy Policy</a>
+          <a href="pages/faq.html" class="text-muted text-decoration-none">Terms of Service</a>
+          <a href="admin/index.html" class="text-primary text-decoration-none fw-bold">Admin Login</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.6.2/dist/countUp.umd.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
