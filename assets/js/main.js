@@ -351,7 +351,7 @@ function initSOSTriggers() {
 
 function updatePortalNavLinks() {
   const portalLinks = document.querySelectorAll('.portal-nav-link');
-  const role = sessionStorage.getItem('chh_role');
+  const role = localStorage.getItem('chh_role');
 
   portalLinks.forEach(link => {
     const isRoot = !window.location.pathname.includes('/pages/') && !window.location.pathname.includes('/admin/') && !window.location.pathname.includes('/user/');
@@ -364,5 +364,19 @@ function updatePortalNavLinks() {
       link.href = basePrefix + 'user/index.html';
       link.innerHTML = '<i class="fas fa-user-circle me-1"></i> User Portal';
     }
+  });
+
+  initLogoutHandlers();
+}
+
+function initLogoutHandlers() {
+  document.querySelectorAll('.btn-logout').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      localStorage.removeItem('chh_role');
+      localStorage.removeItem('chh_user');
+      const isRoot = !window.location.pathname.includes('/pages/') && !window.location.pathname.includes('/admin/') && !window.location.pathname.includes('/user/');
+      window.location.href = isRoot ? 'index.html' : '../index.html';
+    });
   });
 }

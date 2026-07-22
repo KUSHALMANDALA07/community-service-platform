@@ -1,16 +1,18 @@
 /* ==========================================================================
    COMMUNITY HELP HUB - ADMIN PORTAL ROUTE GUARD
-   Protects Admin pages: Only allows access if authenticated as 'admin' / 'admin123'.
+   Protects Admin pages: Requires persistent 'admin' role in localStorage.
+   Does not log out on refresh until user explicitly clicks Logout.
    ========================================================================== */
 
 (function () {
-  const currentRole = sessionStorage.getItem('chh_role');
+  const currentRole = localStorage.getItem('chh_role');
 
   // If not authenticated as Admin, prompt for Admin credentials or redirect
   if (currentRole !== 'admin') {
     const adminPass = prompt('RESTRICTED ACCESS: Enter Admin Password to access Admin Portal:');
     if (adminPass === 'admin123') {
-      sessionStorage.setItem('chh_role', 'admin');
+      localStorage.setItem('chh_role', 'admin');
+      localStorage.setItem('chh_user', 'Super Admin');
       if (typeof showToast === 'function') {
         showToast('Admin Authentication Successful!', 'success');
       }
