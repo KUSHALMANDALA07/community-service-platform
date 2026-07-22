@@ -283,6 +283,7 @@ function initFormHandlers() {
       const formId = form.id;
       
       if (formId === 'request-help-form') {
+        if (typeof requireUserAuth === 'function' && !requireUserAuth('submit a help request')) return;
         let newId = 'CHH-' + Math.floor(1000 + Math.random() * 9000);
         if (typeof DataEngine !== 'undefined') {
           const inputs = form.querySelectorAll('input, select');
@@ -298,6 +299,7 @@ function initFormHandlers() {
         showToast('Help request submitted successfully! Tracking ID: #' + newId, 'success');
         form.reset();
       } else if (formId === 'donate-form') {
+        if (typeof requireUserAuth === 'function' && !requireUserAuth('schedule a donation pickup')) return;
         if (typeof DataEngine !== 'undefined') {
           const selects = form.querySelectorAll('select');
           const inputs = form.querySelectorAll('input');
@@ -312,6 +314,7 @@ function initFormHandlers() {
         form.reset();
         setTimeout(() => triggerReceiptDownload(), 1500);
       } else if (formId === 'volunteer-form') {
+        if (typeof requireUserAuth === 'function' && !requireUserAuth('register as a volunteer')) return;
         showToast('Volunteer application received! Welcome to the Community Help Hub family.', 'success');
         form.reset();
       } else if (formId === 'contact-form') {
