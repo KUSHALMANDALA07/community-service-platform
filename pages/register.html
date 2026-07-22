@@ -103,8 +103,8 @@
     document.querySelectorAll('.reg-form').forEach(form => {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Verification code sent to your registered email! Account created.');
-        window.location.href = 'login.html';
+        alert('Verification code sent! Account created. Redirecting to your User Portal...');
+        window.location.href = '../user/index.html';
       });
     });
   </script>

@@ -20,10 +20,20 @@
             <h4 class="fw-bold text-primary mb-0">Community Help Hub</h4>
           </a>
 
-          <h5 class="fw-bold mb-1">Welcome Back</h5>
-          <p class="text-muted small mb-4">Sign in to manage your requests and volunteer portal.</p>
+          <h5 class="fw-bold mb-1">Sign In to Your Portal</h5>
+          <p class="text-muted small mb-4">Select your portal role below to access your dashboard.</p>
 
           <form id="login-form">
+            <div class="mb-3 text-start">
+              <label class="form-label fw-semibold small">Select Portal Access <span class="text-danger">*</span></label>
+              <select id="login-role" class="form-select form-control-custom" required>
+                <option value="user" selected>User / Citizen Portal</option>
+                <option value="volunteer">Volunteer Portal</option>
+                <option value="ngo">NGO Partner Portal</option>
+                <option value="admin">Admin Control Center</option>
+              </select>
+            </div>
+
             <div class="mb-3 text-start">
               <label class="form-label fw-semibold small">Email Address</label>
               <div class="input-group">
@@ -48,10 +58,10 @@
               <a href="#" class="text-primary text-decoration-none fw-semibold" onclick="alert('Password reset link sent to your registered email!');">Forgot Password?</a>
             </div>
 
-            <button type="submit" class="btn btn-primary-custom w-100 py-2.5 mb-3 fw-bold"><i class="fas fa-sign-in-alt me-2"></i> Log In</button>
+            <button type="submit" class="btn btn-primary-custom w-100 py-2.5 mb-3 fw-bold"><i class="fas fa-sign-in-alt me-2"></i> Log In to Selected Portal</button>
             
-            <button type="button" class="btn btn-outline-secondary w-100 py-2.5 mb-4 rounded-pill small" onclick="alert('Google SSO Simulated Authentication Successful!'); window.location.href='../admin/volunteer-dashboard.html';">
-              <i class="fab fa-google text-danger me-2"></i> Continue with Google
+            <button type="button" class="btn btn-outline-secondary w-100 py-2.5 mb-4 rounded-pill small" onclick="alert('Google SSO Simulated Authentication Successful!'); window.location.href='../user/index.html';">
+              <i class="fab fa-google text-danger me-2"></i> Continue with Google (User Portal)
             </button>
           </form>
 
@@ -69,8 +79,21 @@
   <script>
     document.getElementById('login-form').addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('Login successful! Redirecting to Admin & Volunteer Dashboard...');
-      window.location.href = '../admin/index.html';
+      const role = document.getElementById('login-role').value;
+      
+      if (role === 'admin') {
+        alert('Logging in as Admin... Redirecting to Admin Control Center.');
+        window.location.href = '../admin/index.html';
+      } else if (role === 'volunteer') {
+        alert('Logging in as Volunteer... Redirecting to Volunteer Portal.');
+        window.location.href = '../admin/volunteer-dashboard.html';
+      } else if (role === 'ngo') {
+        alert('Logging in as NGO Partner... Redirecting to NGO Portal.');
+        window.location.href = '../admin/ngo-dashboard.html';
+      } else {
+        alert('Logging in as Citizen... Redirecting to User Portal.');
+        window.location.href = '../user/index.html';
+      }
     });
   </script>
 </body>

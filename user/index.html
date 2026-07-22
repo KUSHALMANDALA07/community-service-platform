@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Portal | Community Help Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="d-flex">
+    
+    <!-- USER SIDEBAR -->
+    <aside class="admin-sidebar" style="width: 260px;">
+      <div class="d-flex align-items-center mb-4 px-2">
+        <div class="stat-icon me-2 mb-0" style="width: 36px; height: 36px; font-size: 1rem;"><i class="fas fa-user-circle text-primary"></i></div>
+        <h5 class="fw-bold text-primary mb-0">User <span class="badge bg-primary text-white fs-8">Portal</span></h5>
+      </div>
+
+      <nav class="nav flex-column">
+        <a class="admin-nav-item active" href="index.html"><i class="fas fa-home"></i> My Dashboard</a>
+        <a class="admin-nav-item" href="../pages/request-help.html"><i class="fas fa-hand-holding-water text-success"></i> Request Help</a>
+        <a class="admin-nav-item" href="../pages/donate.html"><i class="fas fa-donate text-warning"></i> Donate Items</a>
+        <a class="admin-nav-item" href="../pages/medical-support.html"><i class="fas fa-user-md text-danger"></i> Medical Aid</a>
+        <a class="admin-nav-item" href="../pages/emergency.html"><i class="fas fa-ambulance text-danger"></i> Emergency SOS</a>
+        <a class="admin-nav-item" href="../index.html"><i class="fas fa-globe"></i> Main Website</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN USER CONTENT -->
+    <main class="flex-grow-1 p-4" style="background: var(--bg-main);">
+      
+      <!-- TOP BAR -->
+      <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <div class="d-flex align-items-center gap-3">
+          <div class="stat-icon mb-0" style="width: 48px; height: 48px; font-size: 1.4rem; background: rgba(46, 139, 87, 0.15); color: var(--primary-color);"><i class="fas fa-user"></i></div>
+          <div>
+            <h4 class="fw-bold mb-0">Welcome, Rahul Sharma <span class="badge bg-success fs-8">Citizen User</span></h4>
+            <small class="text-muted">User ID: #USR-9021 • Account Active</small>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-outline-secondary btn-sm rounded-circle p-2" id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+          <a href="../pages/login.html" class="btn btn-outline-danger btn-sm"><i class="fas fa-sign-out-alt me-1"></i> Logout</a>
+        </div>
+      </div>
+
+      <!-- USER METRIC CARDS -->
+      <div class="row g-4 mb-4">
+        
+        <div class="col-md-4">
+          <div class="stat-card">
+            <i class="fas fa-hand-holding-water text-primary fs-3 mb-2"></i>
+            <h3 class="fw-bold mb-0 text-primary" id="user-req-count">2</h3>
+            <small class="text-muted">Submitted Help Requests</small>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="stat-card">
+            <i class="fas fa-gift text-warning fs-3 mb-2"></i>
+            <h3 class="fw-bold mb-0 text-warning" id="user-don-count">1</h3>
+            <small class="text-muted">Donations Contributed</small>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="stat-card">
+            <i class="fas fa-shield-alt text-success fs-3 mb-2"></i>
+            <h3 class="fw-bold mb-0 text-success">Verified</h3>
+            <small class="text-muted">User Account Status</small>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- QUICK ACTIONS -->
+      <div class="row g-4 mb-4">
+        <div class="col-md-6">
+          <div class="glass-card p-4 d-flex align-items-center justify-content-between">
+            <div>
+              <h5 class="fw-bold text-primary mb-1"><i class="fas fa-hand-holding-heart me-2"></i> Need Immediate Assistance?</h5>
+              <p class="text-muted small mb-0">Submit a food, medical, or education aid request.</p>
+            </div>
+            <a href="../pages/request-help.html" class="btn btn-primary-custom btn-sm text-nowrap">Request Help</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="glass-card p-4 d-flex align-items-center justify-content-between">
+            <div>
+              <h5 class="fw-bold text-warning mb-1"><i class="fas fa-box-open me-2"></i> Schedule Item Pickup</h5>
+              <p class="text-muted small mb-0">Donate clothes, books, medicines, or ration packages.</p>
+            </div>
+            <a href="../pages/donate.html" class="btn btn-accent-custom btn-sm text-nowrap">Donate Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MY HELP REQUESTS TABLE -->
+      <div class="glass-card p-4 mb-4">
+        <h5 class="fw-bold mb-3"><i class="fas fa-list text-primary me-2"></i> My Submitted Help Requests</h5>
+        <div class="table-responsive">
+          <table class="table table-hover align-middle small mb-0">
+            <thead class="table-light">
+              <tr>
+                <th>Tracking ID</th>
+                <th>Category</th>
+                <th>Location</th>
+                <th>Urgency</th>
+                <th>Submitted Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="user-requests-list">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- MY DONATIONS TABLE -->
+      <div class="glass-card p-4">
+        <h5 class="fw-bold mb-3"><i class="fas fa-box text-warning me-2"></i> My Tracked Donations</h5>
+        <div class="table-responsive">
+          <table class="table table-hover align-middle small mb-0">
+            <thead class="table-light">
+              <tr>
+                <th>Donation ID</th>
+                <th>Item Type</th>
+                <th>Quantity</th>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="user-donations-list">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/firebase-sim.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const requests = DataEngine.getRequests();
+      const donations = DataEngine.getDonations();
+
+      document.getElementById('user-req-count').innerText = requests.length;
+      document.getElementById('user-don-count').innerText = donations.length;
+
+      document.getElementById('user-requests-list').innerHTML = requests.map(r => `
+        <tr>
+          <td><strong class="text-primary">#${r.id}</strong></td>
+          <td><span class="badge bg-info text-white">${r.category}</span></td>
+          <td>${r.location}</td>
+          <td><span class="badge bg-${r.urgency === 'CRITICAL' ? 'danger' : 'warning text-dark'}">${r.urgency}</span></td>
+          <td>${r.date}</td>
+          <td><span class="badge bg-success">${r.status}</span></td>
+        </tr>
+      `).join('');
+
+      document.getElementById('user-donations-list').innerHTML = donations.map(d => `
+        <tr>
+          <td><strong class="text-warning">#${d.id}</strong></td>
+          <td>${d.type}</td>
+          <td>${d.amount}</td>
+          <td>${d.date}</td>
+          <td><span class="badge bg-primary">${d.status}</span></td>
+        </tr>
+      `).join('');
+    });
+  </script>
+</body>
+</html>
