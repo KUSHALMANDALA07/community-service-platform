@@ -280,15 +280,37 @@ function initFormHandlers() {
       const formId = form.id;
       
       if (formId === 'request-help-form') {
-        showToast('Help request submitted successfully! Tracking ID: #CHH-' + Math.floor(1000 + Math.random() * 9000), 'success');
-        form.reset();
-      } else if (formId === 'volunteer-form') {
-        showToast('Volunteer application received! Welcome to the Community Help Hub family.', 'success');
+        let newId = 'CHH-' + Math.floor(1000 + Math.random() * 9000);
+        if (typeof DataEngine !== 'undefined') {
+          const inputs = form.querySelectorAll('input, select');
+          const reqData = {
+            name: inputs[0]?.value || 'Citizen Request',
+            category: inputs[3]?.value || 'General Aid',
+            location: inputs[5]?.value || 'Local Area',
+            urgency: inputs[4]?.value || 'Medium'
+          };
+          const created = DataEngine.addRequest(reqData);
+          if (created && created.id) newId = created.id;
+        }
+        showToast('Help request submitted successfully! Tracking ID: #' + newId, 'success');
         form.reset();
       } else if (formId === 'donate-form') {
+        if (typeof DataEngine !== 'undefined') {
+          const selects = form.querySelectorAll('select');
+          const inputs = form.querySelectorAll('input');
+          const donData = {
+            type: selects[0]?.value || 'General Donation',
+            amount: inputs[0]?.value || '1 Package',
+            donor: 'Anonymous Donor'
+          };
+          DataEngine.addDonation(donData);
+        }
         showToast('Thank you for your generous donation! Downloading receipt...', 'success');
         form.reset();
         setTimeout(() => triggerReceiptDownload(), 1500);
+      } else if (formId === 'volunteer-form') {
+        showToast('Volunteer application received! Welcome to the Community Help Hub family.', 'success');
+        form.reset();
       } else if (formId === 'contact-form') {
         showToast('Message sent! We will contact you within 24 hours.', 'success');
         form.reset();
